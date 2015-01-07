@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <title>Shoppy</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+  </head>
+  <body>
+    <div class='container'>
+      <h1>Shopping List</h1>
+      <hr>
+      <form action='/' method='POST'>
+        <h4>Enter an item</h4>
+        <input class='form-control' type='text' name='item_title'/><br/>
+        <input class='btn btn-default btn-success form-control' type='submit'/>
+      </form>
+
+      <% unless items.empty? %>
+        <h4>Your shopping list</h4>
+        <% items.each do |item| %>
+          <p><%= item %></p>
+        <% end %>
+      <% end %>
+    </div>
+  </body>
+</html>
